@@ -12,7 +12,7 @@ public class MainActiviry extends AppCompatActivity {
     setContentView(R.layout.activity_main);
     // TODO 単語のリストをDBから取得してリストして表示
     // TODO 単語の長押しで、単語を編集するダイアログを表示する
-
+    // test
   }
 
   // TODO 単語を登録するダイアログを表示する
