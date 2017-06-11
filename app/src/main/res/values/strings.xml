@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">VocablaryBuilderApp</string>
+  <string name="title_menu">Main</string>
+  <string name="btnRegister">単語を登録する</string>
+  <string name="wordTxtView">単語</string>
+  <string name="meaningTextView">意味</string>
+  <string name="imageTextView">画像</string>
+</resources>
