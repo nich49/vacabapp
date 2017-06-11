@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class MainActiviry extends AppCompatActivity {
 
@@ -15,8 +14,8 @@ public class MainActiviry extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     // TODO 単語のリストをDBから取得してリストして表示
-    // TODO 単語の長押しで、単語を編集するダイアログを表示する
-    // test
+    // TODO 単語の長押しで、単語を編集するダイアログを表示す
+      // test
     // とりあえずのリストを表示
     ArrayList<ListItem> listItems = new ArrayList<>();
     listItems.add(generateListItem(1, "achieve",
@@ -28,6 +27,7 @@ public class MainActiviry extends AppCompatActivity {
     ListAdapter listAdapter = new ListAdapter(this, listItems, R.layout.list_item);
     ListView listView = (ListView) findViewById(R.id.list);
     listView.setAdapter(listAdapter);
+
   }
 
   // TODO 単語を登録するダイアログを表示する
@@ -37,10 +37,10 @@ public class MainActiviry extends AppCompatActivity {
 
   /**
    * ListItemを生成する
-   * @param id id
-   * @param name 単語
-   * @param meaning 単語の意味
-   * @return ListItem
+   * @param id
+   * @param name
+   * @param meaning
+   * @return
    */
   private ListItem generateListItem(long id, String name, String meaning) {
     ListItem listItem = new ListItem();
