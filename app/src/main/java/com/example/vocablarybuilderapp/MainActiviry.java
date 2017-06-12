@@ -1,5 +1,6 @@
 package com.example.vocablarybuilderapp;
 
+import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -31,9 +32,13 @@ public class MainActiviry extends AppCompatActivity {
 
   }
 
-  // TODO 単語を登録するダイアログを表示する
+  /**
+   * Registerダイアログを表示する
+   * @param view ビュー
+   */
   public void btnRegister_onClick(View view) {
-
+    DialogFragment dialogFragment = new RegisterDialogFragment();
+    dialogFragment.show(getFragmentManager(), "dialog_register");
   }
 
   /**
