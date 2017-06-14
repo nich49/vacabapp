@@ -50,7 +50,7 @@ public class ListAdapter extends BaseAdapter {
       view = activity.getLayoutInflater()
           .inflate(this.resource, null);
     }
-    ((TextView) view.findViewById(R.id.name)).setText(item.getName());
+    ((TextView) view.findViewById(R.id.word)).setText(item.getWord());
     ((TextView) view.findViewById(R.id.meaning)).setText(item.getMeaning());
     ((TextView) view.findViewById(R.id.createdDate)).setText(item.getCreatedDate().toString());
     return view;

@@ -1,7 +1,5 @@
 package com.example.vocablarybuilderapp;
 
-import java.util.Date;
-
 /**
  * Created by auk on 2017/06/11.
  * リストされる単語のクラス
@@ -9,11 +7,11 @@ import java.util.Date;
 
 public class ListItem {
   private long id = 0;
-  private String name = null;
+  private String word = null;
   private String meaning = null;
   private String imagePath = null;
-  private Date createdDate = null;
-  private Date modifiedDate = null;
+  private Long createdDate = null;
+  private Long modifiedDate = null;
 
   public long getId() {
     return id;
@@ -23,12 +21,12 @@ public class ListItem {
     this.id = id;
   }
 
-  public String getName() {
-    return name;
+  public String getWord() {
+    return word;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setWord(String word) {
+    this.word = word;
   }
 
   public String getMeaning() {
@@ -47,19 +45,19 @@ public class ListItem {
     this.imagePath = imagePath;
   }
 
-  public Date getCreatedDate() {
+  public Long getCreatedDate() {
     return createdDate;
   }
 
-  public void setCreatedDate(Date createdDate) {
+  public void setCreatedDate(Long createdDate) {
     this.createdDate = createdDate;
   }
 
-  public Date getModifiedDate() {
+  public Long getModifiedDate() {
     return modifiedDate;
   }
 
-  public void setModifiedDate(Date modifiedDate) {
+  public void setModifiedDate(Long modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
 }
