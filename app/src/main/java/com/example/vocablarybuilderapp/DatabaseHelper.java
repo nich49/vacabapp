@@ -36,7 +36,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
   public void onCreate(SQLiteDatabase sqLiteDatabase) {
     // テーブルを作成
     sqLiteDatabase.execSQL("CREATE TABLE vocabulary_list "
-                          + "(id INTEGER PRIMARY KEY AUTOINCREMENT, word TEXT, meaning TEXT, created_date INTEGER)");
+                          + "(id INTEGER PRIMARY KEY AUTOINCREMENT, word TEXT, meaning TEXT, "
+                          + "image_path TEXT, created_date INTEGER)");
     // テストデータを用意
     ArrayList<ListItem> listItems = new ArrayList<>();
     listItems.add(generateListItem(1, "achieve",
@@ -49,12 +50,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     sqLiteDatabase.beginTransaction();
     try {
       SQLiteStatement sqLiteStatement = sqLiteDatabase.compileStatement(
-          "INSERT INTO vocabulary_list(id, word, meaning, created_date) VALUES (?, ?, ?, ?)");
+          "INSERT INTO vocabulary_list(id, word, meaning, image_path, created_date) VALUES (?, ?, ?, ?, ?)");
       for (ListItem listItem: listItems) {
         sqLiteStatement.bindLong(1, listItem.getId());
         sqLiteStatement.bindString(2, listItem.getWord());
         sqLiteStatement.bindString(3, listItem.getMeaning());
-        sqLiteStatement.bindLong(4, listItem.getCreatedDate());
+        sqLiteStatement.bindString(4, listItem.getImagePath());
+        sqLiteStatement.bindLong(5, listItem.getCreatedDate());
         sqLiteStatement.executeInsert();
       }
       sqLiteDatabase.setTransactionSuccessful();
