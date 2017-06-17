@@ -7,13 +7,14 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by auk on 2017/06/11.
  */
 
-public class ListAdapter extends BaseAdapter {
+public class ListAdapter extends BaseAdapter implements Serializable {
   private Context context = null;
   private ArrayList<ListItem> listItems = null;
   private int resource = 0;

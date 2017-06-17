@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+  <TextView
+    android:id="@+id/wordTxtView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/wordTxtView"/>
+
+  <EditText
+    android:id="@+id/wordEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+  <TextView
+    android:id="@+id/meaningTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/meaningTextView"/>
+
+  <EditText
+    android:id="@+id/meaningEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+  <TextView
+    android:id="@+id/imageTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/imageTextView"/>
+
+  <EditText
+    android:id="@+id/imageEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+</LinearLayout>

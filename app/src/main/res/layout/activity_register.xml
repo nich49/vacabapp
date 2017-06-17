@@ -3,58 +3,58 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-  <TextView
-    android:id="@+id/wordTxtView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/wordTxtView"/>
+  <!--<TextView-->
+    <!--android:id="@+id/wordTxtView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/wordTxtView"/>-->
 
-  <EditText
-    android:id="@+id/wordEditText"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+  <!--<EditText-->
+    <!--android:id="@+id/wordEditText"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
 
-  <TextView
-    android:id="@+id/meaningTextView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/meaningTextView"/>
+  <!--<TextView-->
+    <!--android:id="@+id/meaningTextView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/meaningTextView"/>-->
 
-  <EditText
-    android:id="@+id/meaningEditText"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+  <!--<EditText-->
+    <!--android:id="@+id/meaningEditText"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
 
-  <TextView
-    android:id="@+id/imageTextView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/imageTextView"/>
+  <!--<TextView-->
+    <!--android:id="@+id/imageTextView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/imageTextView"/>-->
 
-  <EditText
-    android:id="@+id/imageEditText"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+  <!--<EditText-->
+    <!--android:id="@+id/imageEditText"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
 
-  <RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+  <!--<RelativeLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
 
-    <Button
-      android:id="@+id/btnCancelRecord"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_toLeftOf="@+id/btnRecord"
-      android:onClick="btnCancelRecord_onClick"
-      android:text="キャンセル"/>
+    <!--<Button-->
+      <!--android:id="@+id/btnCancelRecord"-->
+      <!--android:layout_width="wrap_content"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:layout_toLeftOf="@+id/btnRecord"-->
+      <!--&lt;!&ndash;android:onClick="btnCancelRecord_onClick"&ndash;&gt;-->
+      <!--android:text="キャンセル"/>-->
 
-    <Button
-      android:id="@+id/btnRecord"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentEnd="true"
-      android:layout_alignParentRight="true"
-      android:onClick="btnRecord_onClick"
-      android:text="単語を登録する"/>
-  </RelativeLayout>
+    <!--<Button-->
+      <!--android:id="@+id/btnRecord"-->
+      <!--android:layout_width="wrap_content"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:layout_alignParentEnd="true"-->
+      <!--android:layout_alignParentRight="true"-->
+      <!--&lt;!&ndash;android:onClick="btnRecord_onClick"&ndash;&gt;-->
+      <!--android:text="単語を登録する"/>-->
+  <!--</RelativeLayout>-->
 </LinearLayout>
