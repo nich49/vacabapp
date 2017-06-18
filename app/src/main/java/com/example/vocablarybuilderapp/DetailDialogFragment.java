@@ -18,7 +18,7 @@ public class DetailDialogFragment extends DialogFragment {
         .inflate(R.layout.fragment_register_dialog, null);
 
     // TODO 単語の詳細を表示
-    AlertDialog.Builder builder = new AlertDialog.Builder();
+    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
     builder.setTitle("Detail word");
 
     return super.onCreateDialog(savedInstanceState);

@@ -54,15 +54,6 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(listAdapter);
 
-        // リスト項目が押下された時、editWordダイアログを表示
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-          @Override
-          public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-            setPosition(position);
-            detail();
-          }
-        });
-
         // リスト項目が長押しされた時、deleteCheckダイアログを表示
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
           @Override
@@ -94,19 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
     dialog.setArguments(args);
     dialog.show(getFragmentManager(), "registerDialog_button");
-  }
-
-  /**
-   * ダイアログを表示する
-   */
-  private void detail() {
-    ListItem listItem = listItems.get(getPosition());
-    RegisterDialogFragment dialog = new RegisterDialogFragment();
-    Bundle args = new Bundle();
-    args.putString("word", listItem.getWord());
-
-    dialog.setArguments(args);
-    dialog.show(getFragmentManager(), "editWord_button");
   }
 
   /**
