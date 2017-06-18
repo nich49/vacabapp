@@ -80,26 +80,3 @@ public class RegisterDialogFragment extends DialogFragment {
     return builder.create();
   }
 }
-
-/**
- * 登録ボタンの処理(sample)
- */
-//  public void btnRecord_onClick(View view) {
-//    EditText wordEditText = (EditText) findViewById(R.id.wordEditText);
-//    EditText meaningEditText = (EditText) findViewById(R.id.meaningEditText);
-//    EditText imagePathEditText = (EditText) findViewById(R.id.imageEditText);
-//
-//    SQLiteDatabase database = new DatabaseHelper(this).getWritableDatabase();
-//    try {
-//      ContentValues content = new ContentValues();
-//      content.put("word", wordEditText.getText().toString());
-//      content.put("meaning", meaningEditText.getText().toString());
-//      content.put("image_path", imagePathEditText.getText().toString());
-//      database.insert("vocabulary_list", null, content);
-//      Toast.makeText(this, "単語を登録しました。",
-//          Toast.LENGTH_SHORT).show();
-//    } finally {
-//      database.close();
-//    }
-//    finish();
-//  }

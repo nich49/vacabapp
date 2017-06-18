@@ -13,10 +13,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-// TODO 単語帳の検索ボックス
-// TODO リスト項目を全て削除すると落ちるバグ修正
-// TODO 削除メッセージがpositioin + 1の項目に関すること表示しているので修正
-
 public class MainActivity extends AppCompatActivity {
   private DatabaseHelper databaseHelper = null;
   private ArrayList<ListItem> listItems = null;
@@ -49,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
           listItems.add(listItem);
           cursor.moveToNext();
         }
-        // TODO リスト表示された単語の長押しで、単語を編集するダイアログを表示する
         listAdapter = new ListAdapter(this, listItems, R.layout.list_item);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(listAdapter);
@@ -88,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   /**
-   * deleteダイアログを表示して確認
+   * deleteCheckダイアログを表示して確認
    */
   private void checkDelete() {
     ListItem listItem = findListItem(position);
@@ -133,10 +128,19 @@ public class MainActivity extends AppCompatActivity {
     listAdapter.notifyDataSetChanged();
   }
 
+  /**
+   * 選択されたリストの位置をセット
+   * @param position リスト項目の位置
+   */
   private void setPosition(int position) {
     this.position = position;
   }
 
+  /**
+   *  選択されたリスト項目を取得
+   * @param position リスト項目の位置
+   * @return listItem リスト項目を返す
+   */
   private ListItem findListItem(int position) {
     return getListItems().get(position);
   }
@@ -145,6 +149,10 @@ public class MainActivity extends AppCompatActivity {
     return this.listItems;
   }
 
+  /**
+   * 選択されたリストの位置を取得
+   * @return position リスト項目の位置
+   */
   private int getPosition() {
     return this.position;
   }
